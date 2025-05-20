@@ -1,0 +1,670 @@
+{
+  "name": "ONPG",
+  "references": [],
+  "creators": [],
+  "vessels": [
+    {
+      "id": "v1",
+      "name": "v1",
+      "volume": 1.0,
+      "unit": {
+        "base_units": []
+      },
+      "constant": true
+    }
+  ],
+  "proteins": [
+    {
+      "id": "p1",
+      "name": "Beta-galactosidase",
+      "constant": false,
+      "sequence": "MPGFLVRILPLLLVLLLLGPTRGLRNATQRMFEIDYSRDSFLKDGQPFRYISGSIHYSRVPRFYWKDRLLKMKMAGLNAIQTYVPWNFHEPWPGQYQFSEDHDVEYFLRLAHELGLLVILRPGPYICAEWEMGGLPAWLLEKESILLRSSDPDYLAAVDKWLGVLLPKMKPLLYQNGGPVITVQVENEYGSYFACDFDYLRFLQKRFRHHLGDDVVLFTTDGAHKTFLKCGALQGLYTTVDFGTGSNITDAFLSQRKCEPKGPLINSEFYTGWLDHWGQPHSTIKTEAVASSLYDILARGASVNLYMFIGGTNFAYWNGANSPYAAQPTSYDYDAPLSEAGDLTEKYFALRNIIQKFEKVPEGPIPPSTPKFAYGKVTLEKLKTVGAALDILCPSGPIKSLYPLTFIQVKQHYGFVLYRTTLPQDCSNPAPLSSPLNGVHDRAYVAVDGIPQGVLERNNVITLNITGKAGATLDLLVENMGRVNYGAYINDFKGLVSNLTLSSNILTDWTIFPLDTEDAVRSHLGGWGHRDSGHHDEAWAHNSSNYTLPAFYMGNFSIPSGIPDLPQDTFIQFPGWTKGQVWINGFNLGRYWPARGPQLTLFVPQHILMTSAPNTITVLELEWAPCSSDDPELCAVTFVDRPVIGSSVTYDHPSKPVEKRLMPPPPQKNKDSWLDHV",
+      "vessel_id": "v1",
+      "ecnumber": "3.2.1.23",
+      "organism": "Homo sapiens",
+      "organism_tax_id": "9606",
+      "references": [
+        "https://www.uniprot.org/uniprot/P16278"
+      ]
+    }
+  ],
+  "complexes": [],
+  "small_molecules": [
+    {
+      "id": "s1",
+      "name": "D(+)-Galactose",
+      "constant": false,
+      "vessel_id": "v1",
+      "canonical_smiles": "C(C(C(C(C(C=O)O)O)O)O)O",
+      "inchikey": "InChI=1S/C6H12O6/c7-1-3(9)5(11)6(12)4(10)2-8/h1,3-6,8-12H,2H2/t3-,4+,5+,6-/m0/s1",
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/3037556"
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "2-nitrophenylgalactoside",
+      "constant": false,
+      "vessel_id": "v1",
+      "canonical_smiles": "C1=CC=C(C(=C1)[N+](=O)[O-])OC2C(C(C(C(O2)CO)O)O)O",
+      "inchikey": "InChI=1S/C12H15NO8/c14-5-8-9(15)10(16)11(17)12(21-8)20-7-4-2-1-3-6(7)13(18)19/h1-4,8-12,14-17H,5H2/t8-,9+,10+,11-,12?/m1/s1",
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/123646"
+      ]
+    },
+    {
+      "id": "s3",
+      "name": "O-Nitrophenol",
+      "constant": false,
+      "vessel_id": "v1",
+      "canonical_smiles": "C1=CC=C(C(=C1)[N+](=O)[O-])O",
+      "inchikey": "InChI=1S/C6H5NO3/c8-6-4-2-1-3-5(6)7(9)10/h1-4,8H",
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/6947"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ONPG",
+      "reversible": false,
+      "species": [
+        {
+          "species_id": "s2",
+          "stoichiometry": -1.0
+        },
+        {
+          "species_id": "s3",
+          "stoichiometry": 1.0
+        },
+        {
+          "species_id": "s1",
+          "stoichiometry": 1.0
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "m8",
+      "name": "20",
+      "species_data": [
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.022154,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.022154,
+            0.363141,
+            0.712531,
+            1.064967,
+            1.387644
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s1",
+          "initial": 20.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m1",
+      "name": "0_50",
+      "species_data": [
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.014901,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.014901,
+            0.003852,
+            0.035431,
+            0.069691,
+            0.024975
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s1",
+          "initial": 0.05,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "name": "0_25",
+      "species_data": [
+        {
+          "species_id": "s1",
+          "initial": 0.25,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.0,
+            0.026028,
+            0.087259,
+            0.062602,
+            0.108252
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "name": "0_1",
+      "species_data": [
+        {
+          "species_id": "s1",
+          "initial": 0.1,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.0,
+            0.063376,
+            0.055023,
+            0.033916,
+            0.080277
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "name": "1",
+      "species_data": [
+        {
+          "species_id": "s2",
+          "initial": 0.043969,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.043969,
+            0.113227,
+            0.242026,
+            0.317258,
+            0.463669
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s1",
+          "initial": 1.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "name": "0_5",
+      "species_data": [
+        {
+          "species_id": "s1",
+          "initial": 0.5,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.0,
+            0.039615,
+            0.149427,
+            0.182759,
+            0.237631
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m7",
+      "name": "8",
+      "species_data": [
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.0,
+            0.314266,
+            0.55721,
+            0.884154,
+            1.237906
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s1",
+          "initial": 8.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "name": "2_5",
+      "species_data": [
+        {
+          "species_id": "s2",
+          "initial": 0.003328,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.003328,
+            0.18547,
+            0.451271,
+            0.641981,
+            0.871249
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s1",
+          "initial": 2.5,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    },
+    {
+      "id": "m9",
+      "name": "30",
+      "species_data": [
+        {
+          "species_id": "s1",
+          "initial": 30.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s3",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "p1",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [],
+          "time": [],
+          "data_type": "concentration",
+          "is_simulated": false
+        },
+        {
+          "species_id": "s2",
+          "initial": 0.0,
+          "data_unit": {
+            "base_units": []
+          },
+          "data": [
+            0.0,
+            0.386181,
+            0.831714,
+            1.210309,
+            1.547109
+          ],
+          "time": [
+            0.0,
+            120.0,
+            240.0,
+            360.0,
+            480.0
+          ],
+          "data_type": "concentration",
+          "is_simulated": false
+        }
+      ]
+    }
+  ],
+  "equations": [
+    {
+      "species_id": "s1",
+      "equation": "",
+      "equation_type": "ode",
+      "variables": []
+    },
+    {
+      "species_id": "s2",
+      "equation": "",
+      "equation_type": "ode",
+      "variables": []
+    },
+    {
+      "species_id": "s3",
+      "equation": "",
+      "equation_type": "ode",
+      "variables": []
+    }
+  ],
+  "parameters": []
+}
